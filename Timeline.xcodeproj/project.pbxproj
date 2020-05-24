@@ -13,6 +13,10 @@
 		D5232C832479EFF900236FFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5232C812479EFF900236FFD /* Main.storyboard */; };
 		D5232C852479EFFA00236FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5232C842479EFFA00236FFD /* Assets.xcassets */; };
 		D5232C882479EFFA00236FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5232C862479EFFA00236FFD /* LaunchScreen.storyboard */; };
+		D5232C912479F04600236FFD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5232C902479F04600236FFD /* Model.swift */; };
+		D5232C932479FA7F00236FFD /* Timeline.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5232C922479FA7F00236FFD /* Timeline.plist */; };
+		D5232C952479FB7300236FFD /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5232C942479FB7300236FFD /* ModelController.swift */; };
+		D5232C972479FEE100236FFD /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5232C962479FEE100236FFD /* TimelineCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		D5232C842479EFFA00236FFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5232C872479EFFA00236FFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5232C892479EFFA00236FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5232C8F2479F01600236FFD /* Timeline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timeline.entitlements; sourceTree = "<group>"; };
+		D5232C902479F04600236FFD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D5232C922479FA7F00236FFD /* Timeline.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Timeline.plist; path = "../../Swift Standard Library.playground/Resources/Timeline.plist"; sourceTree = "<group>"; };
+		D5232C942479FB7300236FFD /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		D5232C962479FEE100236FFD /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +65,16 @@
 		D5232C7A2479EFF900236FFD /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
+				D5232C902479F04600236FFD /* Model.swift */,
+				D5232C942479FB7300236FFD /* ModelController.swift */,
+				D5232C8F2479F01600236FFD /* Timeline.entitlements */,
 				D5232C7B2479EFF900236FFD /* AppDelegate.swift */,
 				D5232C7D2479EFF900236FFD /* SceneDelegate.swift */,
+				D5232C962479FEE100236FFD /* TimelineCell.swift */,
 				D5232C7F2479EFF900236FFD /* ViewController.swift */,
 				D5232C812479EFF900236FFD /* Main.storyboard */,
 				D5232C842479EFFA00236FFD /* Assets.xcassets */,
+				D5232C922479FA7F00236FFD /* Timeline.plist */,
 				D5232C862479EFFA00236FFD /* LaunchScreen.storyboard */,
 				D5232C892479EFFA00236FFD /* Info.plist */,
 			);
@@ -128,6 +142,7 @@
 				D5232C882479EFFA00236FFD /* LaunchScreen.storyboard in Resources */,
 				D5232C852479EFFA00236FFD /* Assets.xcassets in Resources */,
 				D5232C832479EFF900236FFD /* Main.storyboard in Resources */,
+				D5232C932479FA7F00236FFD /* Timeline.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5232C972479FEE100236FFD /* TimelineCell.swift in Sources */,
 				D5232C802479EFF900236FFD /* ViewController.swift in Sources */,
+				D5232C952479FB7300236FFD /* ModelController.swift in Sources */,
 				D5232C7C2479EFF900236FFD /* AppDelegate.swift in Sources */,
 				D5232C7E2479EFF900236FFD /* SceneDelegate.swift in Sources */,
+				D5232C912479F04600236FFD /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Timeline/Timeline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UVHFXZWG47;
 				INFOPLIST_FILE = Timeline/Info.plist;
@@ -293,6 +312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.synthus.Timeline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Timeline/Timeline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UVHFXZWG47;
 				INFOPLIST_FILE = Timeline/Info.plist;
@@ -311,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.synthus.Timeline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
